@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Juventus Score Counter</string>
+    <string name="GOAL_BUTTON">GOAL</string>
+    <string name="RESET_BUTTON">RESET</string>
+    <string name="SUBSTITUTION_BUTTON">SUBSTITUTION</string>
+    <string name="juventus">Juventus F.C.</string>
+    <string name="opponents">Opponents</string>
+    <string name="initial_score">0</string>
 </resources>

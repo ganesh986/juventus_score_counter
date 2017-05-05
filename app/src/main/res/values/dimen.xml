@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin">12dp</dimen>
+    <dimen name="marginBottom">24dp</dimen>
+    <dimen name="marginRight">24dp</dimen>
+    <dimen name="marginLeft">24dp</dimen>
+    <dimen name="marginEnd">2dp</dimen>
+    <dimen name="marginStart">2dp</dimen>
+    <dimen name="padding">16dp</dimen>
+    <dimen name="paddingBottom">24dp</dimen>
+    <dimen name="marginBottomLand">8dp</dimen>
+    <dimen name="paddingBottomLand">4dp</dimen>
+</resources>

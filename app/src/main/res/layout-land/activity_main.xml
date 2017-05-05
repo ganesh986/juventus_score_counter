@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     tools:context="com.example.android.juventus_score_counter.MainActivity">
 
     <ImageView
@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:layout_above="@+id/linearLayout"
         android:layout_centerHorizontal="true"
-        android:layout_margin="12dp"
+        android:layout_margin="@dimen/margin"
         android:scaleType="centerInside"
         android:src="@drawable/juventus" />
 
@@ -22,10 +22,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
-        android:layout_marginBottom="8dp"
-        android:backgroundTint="#000000"
+        android:layout_marginBottom="@dimen/marginBottomLand"
+        android:backgroundTint="@color/backGround"
         android:onClick="resetScore"
-        android:text="Reset"
+        android:text="@string/RESET_BUTTON"
         android:textColor="@android:color/white" />
 
     <LinearLayout
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/reset"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="@dimen/marginBottomLand"
         android:orientation="horizontal">
 
 
@@ -53,8 +53,8 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center"
-                android:padding="16dp"
-                android:text="Juventus F.C."
+                android:padding="@dimen/padding"
+                android:text="@string/juventus"
                 android:textColor="@android:color/black"
                 android:textSize="24sp" />
 
@@ -69,12 +69,12 @@
                     android:id="@+id/current_point_juventus"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="2dp"
+                    android:layout_marginEnd="@dimen/marginEnd"
                     android:layout_weight="1"
                     android:fontFamily="sans-serif-light"
                     android:gravity="end"
-                    android:paddingBottom="4dp"
-                    android:text="0"
+                    android:paddingBottom="@dimen/marginBottomLand"
+                    android:text="@string/initial_score"
                     android:textColor="@android:color/black"
                     android:textSize="66sp" />
 
@@ -82,16 +82,17 @@
                     android:id="@+id/current_foul_juventus"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="2dp"
+                    android:layout_marginStart="@dimen/marginStart"
                     android:layout_weight="1"
                     android:fontFamily="sans-serif-light"
                     android:gravity="start"
-                    android:paddingBottom="4dp"
-                    android:text="0"
+                    android:paddingBottom="@dimen/paddingBottomLand"
+                    android:text="@string/initial_score"
                     android:textColor="@android:color/black"
                     android:textSize="24sp" />
 
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/buttonJuventus"
                 android:layout_width="match_parent"
@@ -99,27 +100,27 @@
                 android:gravity="center"
                 android:orientation="horizontal">
 
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="12dp"
-                android:backgroundTint="#000000"
-                android:onClick="addGoalJuventus"
-                android:text="GOAL"
-                android:textColor="@android:color/white" />
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/marginLeft"
+                    android:layout_marginEnd="@dimen/margin"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/backGround"
+                    android:onClick="addGoalJuventus"
+                    android:text="@string/GOAL_BUTTON"
+                    android:textColor="@android:color/white" />
 
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginLeft="12dp"
-                android:layout_marginRight="24dp"
-                android:backgroundTint="#000000"
-                android:onClick="addSubstitutionJuventus"
-                android:text="substitution"
-                android:textColor="@android:color/white" />
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin"
+                    android:layout_marginEnd="@dimen/marginRight"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/backGround"
+                    android:onClick="addSubstitutionJuventus"
+                    android:text="@string/SUBSTITUTION_BUTTON"
+                    android:textColor="@android:color/white" />
             </LinearLayout>
         </LinearLayout>
 
@@ -143,8 +144,8 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center"
-                android:padding="16dp"
-                android:text="Opponents"
+                android:padding="@dimen/padding"
+                android:text="@string/opponents"
                 android:textColor="@android:color/black"
                 android:textSize="24sp" />
 
@@ -159,12 +160,12 @@
                     android:id="@+id/current_point_opponents"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="2dp"
+                    android:layout_marginEnd="@dimen/marginEnd"
                     android:layout_weight="1"
                     android:fontFamily="sans-serif-light"
                     android:gravity="end"
-                    android:paddingBottom="4dp"
-                    android:text="0"
+                    android:paddingBottom="@dimen/paddingBottomLand"
+                    android:text="@string/initial_score"
                     android:textColor="@android:color/black"
                     android:textSize="66sp" />
 
@@ -172,12 +173,12 @@
                     android:id="@+id/current_foul_opponents"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="2dp"
+                    android:layout_marginStart="@dimen/marginStart"
                     android:layout_weight="1"
                     android:fontFamily="sans-serif-light"
                     android:gravity="start"
-                    android:paddingBottom="4dp"
-                    android:text="0"
+                    android:paddingBottom="@dimen/paddingBottomLand"
+                    android:text="@string/initial_score"
                     android:textColor="@android:color/black"
                     android:textSize="24sp" />
 
@@ -190,27 +191,27 @@
                 android:gravity="center"
                 android:orientation="horizontal">
 
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="12dp"
-                android:backgroundTint="#000000"
-                android:onClick="addGoalOpponents"
-                android:text="GOAL"
-                android:textColor="@android:color/white" />
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/marginLeft"
+                    android:layout_marginEnd="@dimen/margin"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/backGround"
+                    android:onClick="addGoalOpponents"
+                    android:text="@string/GOAL_BUTTON"
+                    android:textColor="@android:color/white" />
 
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginLeft="12dp"
-                android:layout_marginRight="24dp"
-                android:backgroundTint="#000000"
-                android:onClick="addSubstitutionOpponents"
-                android:text="substitution"
-                android:textColor="@android:color/white" />
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin"
+                    android:layout_marginEnd="@dimen/marginRight"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/backGround"
+                    android:onClick="addSubstitutionOpponents"
+                    android:text="@string/SUBSTITUTION_BUTTON"
+                    android:textColor="@android:color/white" />
             </LinearLayout>
 
         </LinearLayout>
